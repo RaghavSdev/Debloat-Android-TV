@@ -20,6 +20,14 @@ The design takes its cue from Apple TV: a dark canvas, a softly translucent dock
 
 The top bar brings together a time-aware greeting, a thin clock and date, the TV’s Inputs, and a compact **RAM % · Storage %** status pill. The percentages are live readings and change with the TV’s workload.
 
+### Wallpaper-only, one press away
+
+<p align="center">
+  <img src="launcher/screenshots/wallpaper-only.png" alt="Live wallpaper-only view on the TV, with launcher tiles hidden" width="100%">
+</p>
+
+<p align="center"><sub>Press Red to hide the app tiles; press it again to bring Home back.</sub></p>
+
 ## Details that make it feel like this TV
 
 <table>
