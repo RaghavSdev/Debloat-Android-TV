@@ -4,6 +4,7 @@ Open `index.html` in a modern browser. The site is self-contained and does not n
 
 ## Demo controls
 
+- Drag the before/after divider, or focus it and use the arrow keys, to compare your supplied Google TV reference with the real Glass Home capture.
 - Hover over a streaming tile or use the on-screen RMF-TX300P D-pad / keyboard arrow keys to move the single glass focus highlight.
 - Press Red or `R` to toggle wallpaper-only mode. Press Red again or Home to restore the launcher.
 - Press Blue or `B` for a view-only TV Settings preview.

@@ -49,20 +49,23 @@
             <p class="eyebrow">TOO MUCH TO GET THROUGH</p>
             <h2>Home had<br>become a feed.</h2>
             <p>Promoted rows, recommendations, and services competing for attention sat between the family and the things they actually wanted to watch.</p>
-            <p class="quiet-line">So we started by asking what should stay.</p>
+            <p class="quiet-line">So we started by asking what should stay. Drag the divider to compare the before and after.</p>
           </div>
-          <div class="feed-card" aria-label="Illustration of a crowded television home screen">
-            <div class="feed-top"><span class="feed-dot"></span><span>HOME</span><span class="feed-profile">●</span></div>
-            <div class="feed-greeting">What to watch next</div>
-            <div class="feed-strip">
-              <div class="feed-promo promo-one"><small>FEATURED</small><b>Stream something new</b></div>
-              <div class="feed-promo promo-two"><small>SPONSORED</small><b>Because you watched…</b></div>
-              <div class="feed-promo promo-three"><small>RECOMMENDED</small><b>Trending tonight</b></div>
+          <figure class="before-after" id="homeCompare" aria-label="Compare the supplied Google TV reference with the Glass Home launcher">
+            <div class="compare-stage" id="compareStage">
+              <div class="compare-after-layer">
+                <img src="assets/home-after.png" alt="Glass Home running on the Sony television, with the four-app dock and streaming app grid">
+                <span class="compare-label after-label">GLASS HOME · AFTER</span>
+              </div>
+              <div class="compare-before-layer" id="compareBeforeLayer">
+                <img src="assets/home-before.png" alt="Google TV reference home screen with a large featured show, recommendation rows, and app tiles">
+                <span class="compare-label before-label">BEFORE</span>
+              </div>
+              <div class="compare-divider" id="compareDivider" aria-hidden="true"><span class="compare-handle">↔</span></div>
+              <input class="compare-range" id="compareSlider" type="range" min="0" max="100" step="1" value="50" aria-label="Drag to compare the earlier TV home with Glass Home" aria-valuetext="Half before home, half Glass Home">
             </div>
-            <div class="feed-row-title">Popular on your services</div>
-            <div class="feed-tiles"><i></i><i></i><i></i><i></i></div>
-            <div class="feed-caption"><span>Illustrative before-state</span><span>01 — 04</span></div>
-          </div>
+            <figcaption class="compare-caption"><span>DRAG TO REVEAL</span><span>BEFORE <i>↔</i> GLASS HOME</span></figcaption>
+          </figure>
         </div>
       </div>
     </section>

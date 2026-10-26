@@ -295,8 +295,21 @@
     if (focusArea === 'tile' && !screen.classList.contains('wallpaper-only')) moveGlassTo(currentTile());
   });
 
+  const compareStage = document.getElementById('compareStage');
+  const compareBeforeLayer = document.getElementById('compareBeforeLayer');
+  const compareSlider = document.getElementById('compareSlider');
+  function updateComparison() {
+    const beforePercent = Number(compareSlider.value);
+    compareStage.style.setProperty('--compare-position', beforePercent + '%');
+    compareBeforeLayer.style.clipPath = 'inset(0 ' + (100 - beforePercent) + '% 0 0)';
+    compareSlider.setAttribute('aria-valuetext', beforePercent + '% before home, ' + (100 - beforePercent) + '% Glass Home');
+  }
+  compareSlider.addEventListener('input', updateComparison);
+  compareSlider.addEventListener('change', updateComparison);
+  updateComparison();
+
   const revealTargets = document.querySelectorAll(
-    '.hero-copy, .hero-visual, .chapter-meta, .chapter-copy, .feed-card, .reset-head, .reset-card, .demo-heading > div, .tv-frame, .remote-panel, .demo-legend, .finish-content > .eyebrow, .finish-content > h2, .finish-copy, .finish-link, .finish-foot'
+    '.hero-copy, .hero-visual, .chapter-meta, .chapter-copy, .before-after, .reset-head, .reset-card, .demo-heading > div, .tv-frame, .remote-panel, .demo-legend, .finish-content > .eyebrow, .finish-content > h2, .finish-copy, .finish-link, .finish-foot'
   );
   const revealCounts = new WeakMap();
   revealTargets.forEach(element => {
