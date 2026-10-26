@@ -32,6 +32,7 @@
         <a class="text-link" href="#beginning">Follow the story <span aria-hidden="true">↓</span></a>
       </div>
       <div class="hero-visual" aria-hidden="true">
+        <div class="hero-photo"></div>
         <div class="hero-orbit orbit-one"></div>
         <div class="hero-orbit orbit-two"></div>
         <div class="hero-note"><span>HOME, MADE PERSONAL</span><strong>More of what<br>you came to watch.</strong></div>
@@ -42,14 +43,29 @@
 
     <section class="chapter chapter-before" id="beginning">
       <div class="chapter-inner story-width">
-        <div class="chapter-meta"><span>02 / THE BEGINNING</span><span>A BETTER FIT</span></div>
-        <div class="chapter-grid chapter-grid-single">
+        <div class="chapter-meta"><span>02 / THE BEGINNING</span><span>BEFORE</span></div>
+        <div class="chapter-grid">
           <div class="chapter-copy">
             <p class="eyebrow">TOO MUCH TO GET THROUGH</p>
             <h2>Home had<br>become a feed.</h2>
             <p>Promoted rows, recommendations, and services competing for attention sat between the family and the things they actually wanted to watch.</p>
-            <p class="quiet-line">So we started by asking what should stay.</p>
+            <p class="quiet-line">So we started by asking what should stay. Drag the divider to compare the before and after.</p>
           </div>
+          <figure class="before-after" id="homeCompare" aria-label="Compare the supplied Google TV reference with the Glass Home launcher">
+            <div class="compare-stage" id="compareStage">
+              <div class="compare-after-layer">
+                <img src="assets/home-after.png" alt="Glass Home running on the Sony television, with the four-app dock and streaming app grid">
+                <span class="compare-label after-label">GLASS HOME · AFTER</span>
+              </div>
+              <div class="compare-before-layer" id="compareBeforeLayer">
+                <img src="assets/home-before.png" alt="Google TV reference home screen with a large featured show, recommendation rows, and app tiles">
+                <span class="compare-label before-label">BEFORE</span>
+              </div>
+              <div class="compare-divider" id="compareDivider" aria-hidden="true"><span class="compare-handle">↔</span></div>
+              <input class="compare-range" id="compareSlider" type="range" min="0" max="100" step="1" value="50" aria-label="Drag to compare the earlier TV home with Glass Home" aria-valuetext="Half before home, half Glass Home">
+            </div>
+            <figcaption class="compare-caption"><span>DRAG TO REVEAL</span><span>BEFORE <i>↔</i> GLASS HOME</span></figcaption>
+          </figure>
         </div>
       </div>
     </section>
@@ -198,6 +214,7 @@
     </section>
 
     <section class="chapter chapter-finish" id="ending">
+      <div class="finish-image" aria-hidden="true"></div>
       <div class="finish-content story-width">
         <div class="chapter-meta"><span>04 / THE FINISH</span><span>AND THEN, HOME</span></div>
         <p class="eyebrow">ONE PRESS AT A TIME</p>

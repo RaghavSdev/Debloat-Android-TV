@@ -4,12 +4,13 @@ Open `index.html` in a modern browser. The site is self-contained and does not n
 
 ## Demo controls
 
+- Drag the before/after divider, or focus it and use the arrow keys, to compare your supplied Google TV reference with the real Glass Home capture.
 - Hover over a streaming tile or use the on-screen RMF-TX300P D-pad / keyboard arrow keys to move the single glass focus highlight.
 - Press Red or `R` to toggle wallpaper-only mode. Press Red again or Home to restore the launcher.
 - Press Blue or `B` for a view-only TV Settings preview.
 - Open the launcher settings from the Home icon or Action Menu; scroll through it with Up/Down and return with Back/Escape.
 - Inputs, network status, and App Library open demo panels. Source selection is visual only.
 
-The story animates as you move through it: chapters reveal in sequence, the reading-progress line follows the scroll, and the opening contours drift gently. The app grid uses matching tile tracks so its rows stay aligned, and hover moves the same glass focus highlight used by the remote.
+The story animates as you move through it: chapters reveal in sequence, the reading-progress line follows the scroll, and the opening and closing images drift gently with the page. The app grid uses matching tile tracks so its rows stay aligned, and hover moves the same glass focus highlight used by the remote.
 
-The interactive TV screen uses a gradient backdrop. The remote is drawn in CSS as a lightweight RMF-TX300P-inspired interface.
+The current wallpaper comes from the wallpaper collection supplied for this TV. The remote is drawn in CSS as a lightweight RMF-TX300P-inspired interface.
