@@ -295,21 +295,8 @@
     if (focusArea === 'tile' && !screen.classList.contains('wallpaper-only')) moveGlassTo(currentTile());
   });
 
-  const compareStage = document.getElementById('compareStage');
-  const compareBeforeLayer = document.getElementById('compareBeforeLayer');
-  const compareSlider = document.getElementById('compareSlider');
-  function updateComparison() {
-    const beforePercent = Number(compareSlider.value);
-    compareStage.style.setProperty('--compare-position', beforePercent + '%');
-    compareBeforeLayer.style.clipPath = 'inset(0 ' + (100 - beforePercent) + '% 0 0)';
-    compareSlider.setAttribute('aria-valuetext', beforePercent + '% before home, ' + (100 - beforePercent) + '% Glass Home');
-  }
-  compareSlider.addEventListener('input', updateComparison);
-  compareSlider.addEventListener('change', updateComparison);
-  updateComparison();
-
   const revealTargets = document.querySelectorAll(
-    '.hero-copy, .hero-visual, .chapter-meta, .chapter-copy, .before-after, .demo-heading > div, .tv-frame, .remote-panel, .demo-legend, .finish-content > .eyebrow, .finish-content > h2, .finish-copy, .finish-link, .finish-foot'
+    '.hero-copy, .hero-visual, .chapter-meta, .chapter-copy, .demo-heading > div, .tv-frame, .remote-panel, .demo-legend, .finish-content > .eyebrow, .finish-content > h2, .finish-copy, .finish-link, .finish-foot'
   );
   const revealCounts = new WeakMap();
   revealTargets.forEach(element => {
@@ -333,26 +320,12 @@
   }
 
   const scrollProgressFill = document.getElementById('scrollProgressFill');
-  const heroPhoto = document.querySelector('.hero-photo');
-  const finishSection = document.querySelector('.chapter-finish');
-  const finishImage = document.querySelector('.finish-image');
   let pageMotionFrame = 0;
   function updatePageMotion() {
     pageMotionFrame = 0;
     const scrollable = document.documentElement.scrollHeight - window.innerHeight;
     const progress = scrollable > 0 ? Math.max(0, Math.min(1, window.scrollY / scrollable)) : 0;
     scrollProgressFill.style.transform = 'scaleX(' + progress + ')';
-
-    const heroRect = document.querySelector('.hero-visual').getBoundingClientRect();
-    if (heroRect.bottom > 0 && heroRect.top < window.innerHeight) {
-      const travel = (window.innerHeight - heroRect.top) / (window.innerHeight + heroRect.height);
-      heroPhoto.style.transform = 'translate3d(0,' + ((travel - .5) * -22).toFixed(1) + 'px,0) scale(1.07)';
-    }
-    const finishRect = finishSection.getBoundingClientRect();
-    if (finishRect.bottom > 0 && finishRect.top < window.innerHeight) {
-      const travel = (window.innerHeight - finishRect.top) / (window.innerHeight + finishRect.height);
-      finishImage.style.transform = 'translate3d(0,' + ((travel - .5) * -34).toFixed(1) + 'px,0) scale(1.08)';
-    }
   }
   function requestPageMotion() {
     if (!pageMotionFrame) pageMotionFrame = requestAnimationFrame(updatePageMotion);
