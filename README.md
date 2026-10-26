@@ -1,70 +1,64 @@
-# Debloat Android TV
+# Debloat Android TV — Glass Home
 
-### A quieter home screen, built around the apps you actually watch.
+### A quieter Home screen, shaped around the way this household watches TV.
+
+The stock home had turned into a wall of promotions and recommendation rows. This project started with a simple goal: make Home feel like *our* TV again—open, clear, and easy to drive with a remote.
+
+We reviewed the Sony BRAVIA KD-49X7500E package list, backed up its settings, and disabled selected feedback, reporting, and manufacturer content/recommendation services without uninstalling packages. The household’s streaming apps, voice assistant, Chromecast, Miracast, and firmware updates stayed available. Then we made a native Android TV launcher the primary Home and refined it against the real screen, one change at a time.
 
 <p align="center">
-  <img src="launcher/screenshots/home.png" alt="The finished Android TV home screen, with a focused Prime Video tile, streaming app grid and four-app glass dock" width="960">
+  <img src="launcher/screenshots/home-glass.png" alt="Live capture of the Glass launcher home, with a four-app dock, wallpaper and streaming app grid" width="100%">
 </p>
 
-<p align="center"><sub>Real screen capture from the TV during the project · Sony BRAVIA KD-49X7500E</sub></p>
+<p align="center"><sub>Current Home capture from the TV · personalized name blurred for privacy</sub></p>
 
-Home should take you straight to your shows. This project started by clearing away the stock home screen's
-promotions and recommendation rows, then shaping a single, remote-friendly home around the eight streaming
-apps the household chose.
+## The home we built
 
-We backed up the TV, reviewed its packages, disabled only the unwanted manufacturer feedback and content
-services, and kept the streaming apps and TV features the family uses. Then we installed the native launcher
-and checked its focus movement, Inputs menu and Home behavior with screenshots from the real screen. The result
-is a dark, calm home that feels made for this TV instead of another feed to scroll through.
+The screen keeps the everyday apps in a four-slot glass dock: **Netflix, Prime Video, YouTube, and JioHotstar**. **Sony LIV, ZEE5, aha, and Sun NXT** sit in the grid immediately below, so all eight selected services are on one Home page.
 
-## The finished home
+The design takes its cue from Apple TV: a dark canvas, a softly translucent dock, one glass focus highlight that glides between tiles, and a focused title with a subtle colour glow. The selected wallpaper stays visible behind the interface. Motion was shortened after tuning on the TV, while the focus treatment and other visual effects stayed in place.
 
-The dock keeps the four everyday picks close: **Netflix · Prime Video · YouTube · JioHotstar**. The rest of the
-home grid holds **Sony LIV · ZEE5 · aha · Sun NXT**, so all eight services are available from the same Home
-screen. The App Library can bring any installed app back onto Home.
+The top bar brings together a time-aware greeting, a thin clock and date, the TV’s Inputs, and a compact **RAM % · Storage %** status pill. The percentages are live readings and change with the TV’s workload.
+
+## Details that make it feel like this TV
 
 <table>
   <tr>
-    <td width="50%"><img src="launcher/screenshots/app-grid.png" alt="The app grid focused on Sony LIV, with the four-app dock below" width="100%"></td>
-    <td width="50%"><img src="launcher/screenshots/inputs-menu.png" alt="The glass Inputs menu showing AV, Live TV and HDMI sources" width="100%"></td>
+    <td width="50%"><img src="launcher/screenshots/inputs-menu.png" alt="The live Glass Inputs menu with HDMI, video and Live TV sources" width="100%"></td>
+    <td width="50%"><img src="launcher/screenshots/app-library.png" alt="The live App Library, with AirPlay apps available without occupying Home" width="100%"></td>
   </tr>
   <tr>
-    <td align="center"><sub>App grid and focused tile</sub></td>
-    <td align="center"><sub>Inputs dropdown: AV, Live TV and HDMI</sub></td>
+    <td align="center"><sub>Inputs opens the TV’s HDMI, video and Live TV sources.</sub></td>
+    <td align="center"><sub>App Library: press an app to add it to Home; hold for more options.</sub></td>
+  </tr>
+  <tr>
+    <td width="50%"><img src="launcher/screenshots/wallpaper-picker.png" alt="Wallpaper picker showing the wallpapers uploaded to the TV" width="100%"></td>
+    <td width="50%"><img src="launcher/screenshots/wallpaper-effects.png" alt="Launcher settings for the grid layout, wallpaper and selected-app colour effects" width="100%"></td>
+  </tr>
+  <tr>
+    <td align="center"><sub>Choose from the wallpapers uploaded to the TV.</sub></td>
+    <td align="center"><sub>Keep the wallpaper while independently turning selected-app colour effects off.</sub></td>
   </tr>
 </table>
 
-## What we built and verified
+- **Add apps whenever you like.** Open the App Library and press an app to add or remove it from Home; hold for its options.
+- **Make the wallpaper the screen.** On this TV, Red toggles the wallpaper-only view and brings the apps back on the next press.
+- **Keep the wallpaper’s colour.** A launcher setting switches off the selected-app gradient without switching off the wallpaper.
+- **Reach TV controls quickly.** Blue opens TV Settings on this remote. The Inputs menu uses the TV’s input framework rather than a mock list.
+- **Keep a clock for idle moments.** The launcher’s clock screensaver remains available in the setup.
+- **Mirror an iPhone.** AirPlay mirroring from an iPhone 13 was verified on the TV. The receiver apps were installed separately and are shown in the App Library; they are not part of this launcher repository.
 
-- **A native Android TV launcher** with a pitch-black canvas, rounded glass dock, focused app title and a single
-  moving highlight that follows the D-pad.
-- **A one-home app layout** with four dock slots and the remaining selected streaming apps in the grid.
-- **A real Inputs menu** for AV, Live TV and the TV's HDMI ports, opened through the Android TV input system.
-- **A useful top bar** with a time-aware greeting, clock, date, Inputs, Ethernet status and Settings.
-- **Wallpaper controls** including a wallpaper-only view. On the configured TV, Red toggled that view and Blue
-  opened TV Settings. The selected-app colour effect can be turned off without hiding the wallpaper.
-- **At-a-glance RAM and storage percentages** in one compact status bubble.
-- **A clock screensaver**, an App Library for managing Home shortcuts, and D-pad navigation that remembers
-  focus.
-- **Smoother focus motion** tuned for the TV, with less overshoot while keeping the glass styling.
+The screenshots in this README were freshly pulled from the TV for this update. Personal greeting text is blurred in the public images.
 
-The screenshots above are genuine captures from the setup session, not mockups. Home remained available after
-a reboot, and the remote's Inputs menu showed the TV's actual AV, Live TV and HDMI sources.
+## What this repository contains
 
-## What is in this repository
+This is the launcher-only project requested for the repository: Java launcher source, Gradle build files, the font licence, a build-and-install helper, and the fresh screenshots above. The TV backup and package lists, per-TV theme/profile, uploaded wallpaper files, and separately installed AirPlay receiver are not included.
 
-This repository is intentionally focused on the launcher: Java source, Gradle build files and the screenshots
-shown above. The per-TV setup profile, device backup, debloat scripts, wallpaper collection and separately
-installed AirPlay receiver are not bundled here. AirPlay mirroring from an iPhone 13 was verified separately
-on the TV; it is not a launcher feature.
-
-The launcher source supports themes and remote-key actions. The screenshots document the customized setup used
-for this project; the per-TV configuration itself is not included in this launcher-only repository.
+The Red and Blue button mappings describe the profile used on this TV. Remote mappings and appearance can differ across devices; the repository does not claim those buttons are universal defaults.
 
 ## Build
 
-The launcher targets Android TV devices running Android 8.0 or newer (minimum SDK 26). Build with JDK 17 and
-Android SDK platform 34.
+The launcher supports Android TV devices running Android 8.0 or newer (**minSdk 26**). Build with JDK 17 and Android SDK platform 34.
 
 **Windows PowerShell**
 
@@ -80,10 +74,8 @@ cd launcher
 ./gradlew assembleRelease
 ```
 
-The release APK is written to `launcher/app/build/outputs/apk/release/app-release.apk`. Install it on a
-compatible TV using ADB, then select it as the Home app in the TV's launcher settings.
+The release APK is written to `launcher/app/build/outputs/apk/release/app-release.apk`. The launcher is built for sideloading and Home selection on a compatible Android TV.
 
 ---
 
-Built from the open-source [CleanYourTV launcher](https://github.com/Gathin23/cleanyourtv), then configured
-and refined on a real television for the apps, remote and inputs used in this home.
+Built on the open-source [CleanYourTV launcher](https://github.com/Gathin23/cleanyourtv), then configured and refined for one real TV, one remote, and the apps this household chose.
