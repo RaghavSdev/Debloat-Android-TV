@@ -53,8 +53,8 @@ h1, h2, h3, p { margin-top: 0; }
 .chapter-meta { display: flex; justify-content: space-between; padding-bottom: 17px; border-bottom: 1px solid var(--line); color: rgba(255,255,255,.45); font-size: 9px; letter-spacing: .18em; }
 .chapter-grid { display: grid; grid-template-columns: .8fr 1.2fr; gap: 9%; align-items: center; padding-top: 74px; }
 .chapter-copy { max-width: 430px; }
-.chapter-copy h2, .reset-head h2, .demo-heading h2, .finish-content h2 { margin: 0 0 22px; font-family: Georgia, "Times New Roman", serif; font-size: clamp(46px, 6vw, 86px); font-weight: 400; line-height: .98; letter-spacing: -.06em; }
-.chapter-copy > p:not(.eyebrow), .reset-card p, .demo-instructions p, .finish-copy { color: #9c9da3; font-size: 13px; line-height: 1.85; }
+.chapter-copy h2, .demo-heading h2, .finish-content h2 { margin: 0 0 22px; font-family: Georgia, "Times New Roman", serif; font-size: clamp(46px, 6vw, 86px); font-weight: 400; line-height: .98; letter-spacing: -.06em; }
+.chapter-copy > p:not(.eyebrow), .demo-instructions p, .finish-copy { color: #9c9da3; font-size: 13px; line-height: 1.85; }
 .chapter-copy .quiet-line { margin-top: 29px; color: #ded3c9 !important; font-family: Georgia, serif; font-size: 16px !important; font-style: italic; }
 .before-after { width: 100%; min-width: 0; margin: 0; }
 .compare-stage { --compare-position: 50%; position: relative; width: 100%; aspect-ratio: 16 / 9; overflow: hidden; border: 1px solid rgba(255,255,255,.17); border-radius: 10px; background: #08090c; box-shadow: 0 30px 75px rgba(0,0,0,.42); isolation: isolate; }
@@ -75,18 +75,6 @@ h1, h2, h3, p { margin-top: 0; }
 .compare-stage:focus-within .compare-handle { border-color: #fff; box-shadow: 0 0 0 5px rgba(255,255,255,.2),0 4px 20px rgba(0,0,0,.42); }
 .compare-caption { display: flex; justify-content: space-between; gap: 12px; padding: 12px 2px 0; color: #92939a; font-size: 8px; letter-spacing: .14em; }
 .compare-caption i { padding-inline: 7px; color: #d6b59b; font-style: normal; }
-.chapter-reset { background: #0b0c10; }
-.reset-head { padding: 64px 0 45px; }
-.reset-head h2 { max-width: 900px; }
-.reset-grid { display: grid; grid-template-columns: repeat(3,1fr); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
-.reset-card { position: relative; min-height: 250px; padding: 28px 28px 26px 0; }
-.reset-card + .reset-card { padding-left: 28px; border-left: 1px solid var(--line); }
-.card-number { color: #6d7079; font-size: 9px; letter-spacing: .15em; }
-.card-symbol { display: grid; place-items: center; width: 40px; height: 40px; margin: 24px 0 20px; color: #e1c1a7; border: 1px solid rgba(214,181,155,.35); border-radius: 50%; font-family: Georgia, serif; font-size: 21px; }
-.symbol-eight { font-size: 14px; }
-.symbol-dpad { font-size: 20px; }
-.reset-card h3 { margin-bottom: 9px; font-family: Georgia, serif; font-size: 21px; font-weight: 400; }
-.reset-card p { max-width: 330px; margin-bottom: 0; font-size: 11px; }
 .chapter-home { background: linear-gradient(180deg, #0c0d11, #090a0d); padding-bottom: 95px; }
 .demo-heading { display: flex; justify-content: space-between; align-items: end; gap: 30px; padding: 58px 0 42px; }
 .demo-heading h2 { margin-bottom: 0; }
@@ -258,12 +246,7 @@ kbd { padding: 4px 6px; border: 1px solid #34363d; border-radius: 4px; color: #d
   .hero-bottom { bottom: 27px; font-size: 7px; }
   .chapter { padding: 72px 0 78px; }
   .chapter-grid { grid-template-columns: 1fr; gap: 36px; padding-top: 48px; }
-  .chapter-copy h2, .reset-head h2, .demo-heading h2 { font-size: clamp(48px,13vw,72px); }
-  .reset-head { padding: 47px 0 32px; }
-  .reset-grid { grid-template-columns: 1fr; }
-  .reset-card, .reset-card + .reset-card { min-height: auto; padding: 22px 0; border-left: 0; }
-  .reset-card + .reset-card { border-top: 1px solid var(--line); }
-  .card-symbol { margin: 17px 0 15px; }
+  .chapter-copy h2, .demo-heading h2 { font-size: clamp(48px,13vw,72px); }
   .demo-heading { display: block; padding: 45px 0 28px; }
   .demo-instructions { margin-top: 22px; }
   .demo-layout { grid-template-columns: 1fr; gap: 30px; }

@@ -309,7 +309,7 @@
   updateComparison();
 
   const revealTargets = document.querySelectorAll(
-    '.hero-copy, .hero-visual, .chapter-meta, .chapter-copy, .before-after, .reset-head, .reset-card, .demo-heading > div, .tv-frame, .remote-panel, .demo-legend, .finish-content > .eyebrow, .finish-content > h2, .finish-copy, .finish-link, .finish-foot'
+    '.hero-copy, .hero-visual, .chapter-meta, .chapter-copy, .before-after, .demo-heading > div, .tv-frame, .remote-panel, .demo-legend, .finish-content > .eyebrow, .finish-content > h2, .finish-copy, .finish-link, .finish-foot'
   );
   const revealCounts = new WeakMap();
   revealTargets.forEach(element => {
