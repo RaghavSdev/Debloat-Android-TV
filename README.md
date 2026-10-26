@@ -1,5 +1,7 @@
 # Debloat Android TV — Glass Home
 
+**[Open the interactive Glass Home website](https://raghavsdev.github.io/Debloat-Android-TV/)**
+
 ### A quieter Home screen, shaped around the way this household watches TV.
 
 The stock home had turned into a wall of promotions and recommendation rows. This project started with a simple goal: make Home feel like *our* TV again—open, clear, and easy to drive with a remote.
